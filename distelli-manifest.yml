@@ -4,5 +4,5 @@ bmcgehee/celery_example:
   PkgInclude:
     - '*'
   PreInstall:
-    - echo "Nothing to deploy"
+    - echo "Nothing to deploy" 
      

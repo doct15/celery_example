@@ -1,0 +1,11 @@
+bmcgehee/celery_example:
+  Env:
+    - CELERY: "true"
+  PreInstall:
+    - echo "Doing CeleryDeploy PreInstall Step"
+  PostInstall:
+    - echo "Now have the release bits (if any)"
+    - echo "Example - docker run celery"
+  Start:
+    - echo "Starting Celery"
+    - echo "Example - sudo service celery start"

@@ -1,0 +1,11 @@
+bmcgehee/celery_example:
+  Env:
+    - CELERY: "false"
+  PreInstall:
+    - echo "Doing Webserver deploy!"
+  PostInstall:
+    - echo "Now have the release bits (if any)"
+    - echo "Example - cp /files/* /var/www/html/*"
+  Start:
+    - echo "Stopping dbmigration"
+    - echo "Example - sudo service apache2 restart"

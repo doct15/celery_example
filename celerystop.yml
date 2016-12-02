@@ -1,0 +1,10 @@
+bmcgehee/celery_example:
+  Env:
+    - CELERY: "true"
+  PreInstall:
+    - echo "Doing CeleryStop PreInstall Step"
+  PostInstall:
+    - echo "Now have the release bits (if any)"
+  Start:
+    - echo "Stopping celery"
+    - echo "Example - sudo service celery stop"

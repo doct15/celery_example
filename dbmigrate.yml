@@ -1,0 +1,10 @@
+bmcgehee/celery_example:
+  Env:
+    - CELERY: "false"
+  PreInstall:
+    - echo "Doing DBMigration PreInstall Step"
+  PostInstall:
+    - echo "Now have the release bits (if any)"
+  Start:
+    - echo "Stopping dbmigration"
+    - echo "Example - mongo drop table1"

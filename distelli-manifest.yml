@@ -1,0 +1,8 @@
+bmcgehee/celery_example:
+  Build:
+    - echo "Nothing to Build"
+  PkgInclude:
+    - '*'
+  PreInstall:
+    - echo "Nothing to deploy"
+    

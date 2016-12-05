@@ -4,5 +4,42 @@ bmcgehee/celery_example:
   PkgInclude:
     - '*'
   PreInstall:
-    - echo "Nothing to deploy" 
+    - if [[ "$DISTELLI_ENV" == 'CeleryStop' ]]; then
+    -   echo "CeleryStop"
+    - elif [[ "$DISTELLI_ENV" == 'DBMigrate' ]]; then
+    -   echo "DBMigrate"
+    - elif [[ "$DISTELLI_ENV" == 'WebServers' ]]; then
+    -   echo "WebServers"
+    - elif [[ "$DISTELLI_ENV" == 'CeleryDeploy' ]]; then
+    -   echo "CeleryDeploy"
+    - else
+    -   echo "DISTELLI_ENV not set to a valid value. Failing the deploy."
+    -   exit 1
+    - fi
+  PostInstall:
+    - if [[ "$DISTELLI_ENV" == 'CeleryStop' ]]; then
+    -   echo "CeleryStop"
+    - elif [[ "$DISTELLI_ENV" == 'DBMigrate' ]]; then
+    -   echo "DBMigrate"
+    - elif [[ "$DISTELLI_ENV" == 'WebServers' ]]; then
+    -   echo "WebServers"
+    - elif [[ "$DISTELLI_ENV" == 'CeleryDeploy' ]]; then
+    -   echo "CeleryDeploy"
+    - else
+    -   echo "DISTELLI_ENV not set to a valid value. Failing the deploy."
+    -   exit 1
+    - fi
+  Start:
+    - if [[ "$DISTELLI_ENV" == 'CeleryStop' ]]; then
+    -   echo "CeleryStop"
+    - elif [[ "$DISTELLI_ENV" == 'DBMigrate' ]]; then
+    -   echo "DBMigrate"
+    - elif [[ "$DISTELLI_ENV" == 'WebServers' ]]; then
+    -   echo "WebServers"
+    - elif [[ "$DISTELLI_ENV" == 'CeleryDeploy' ]]; then
+    -   echo "CeleryDeploy"
+    - else
+    -   echo "DISTELLI_ENV not set to a valid value. Failing the deploy."
+    -   exit 1
+    - fi
      
